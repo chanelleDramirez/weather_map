@@ -1,6 +1,9 @@
 "use strict"
 
+
 var token = "pk.eyJ1IjoiY2hhbmVsbGVyYW1pcmV6IiwiYSI6ImNsYjQzODczeTA0bjgzcmwwM2duejFidTkifQ.CxM9hQeZsjYWhK6rQdI5Mw"
+
+
 var api = "39d4ce254bea6299ed932f2dc24245f9"
 
 
@@ -12,16 +15,18 @@ var map = new mapboxgl.Map({
     center: [-98.4916, 29.4252]
 });
 
+
  $("#header").css("background-color", "#0066FF");
+
 
  $("#header").css("color", "white");
 
-let tempElement = $("#temperature-value");
+
+ let tempElement = $("#temperature-value");
 let descElement = $("#temperature-description");
 let humElement = $("#Humidity");
 let windElement = $("#Wind");
 let pressureElement = $("#Pressure");
-
 $.get("http://api.openweathermap.org/data/2.5/weather", {
     APPID: api,
     //  id:     4726206,
@@ -37,9 +42,6 @@ $.get("http://api.openweathermap.org/data/2.5/weather", {
     console.log(data);
 
 
-
-
-
     let lat = 29.4252;
     let long = -98.4916;
     $.get("http://api.openweathermap.org/data/2.5/forecast?lat=" + lat +"&lon="+ long + "&appid=" + api + "&units=imperial").done(function(data){
@@ -50,6 +52,7 @@ $.get("http://api.openweathermap.org/data/2.5/weather", {
         }
     })
 });
+
 
 let marker = new mapboxgl.Marker()
     .setLngLat([-98.4916, 29.4252])
