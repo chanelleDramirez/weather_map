@@ -1,10 +1,10 @@
 "use strict"
 
 
-var token = "pk.eyJ1IjoiY2hhbmVsbGVyYW1pcmV6IiwiYSI6ImNsYjQzODczeTA0bjgzcmwwM2duejFidTkifQ.CxM9hQeZsjYWhK6rQdI5Mw"
+var token =  //Located on keys.js
 
 
-var api = "39d4ce254bea6299ed932f2dc24245f9"
+var api = //Located on keys.js
 
 
 mapboxgl.accessToken = token;
